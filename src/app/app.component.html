@@ -1,7 +1,8 @@
 <table mat-table
-       [dataSource]="dataSource" multiTemplateDataRows
+       [dataSource]="_gridData" 
        class="mat-elevation-z8">
 
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr> <!-- Header row -->
 
   <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
     <th mat-header-cell *matHeaderCellDef> {{column}} </th>

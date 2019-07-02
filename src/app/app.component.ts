@@ -22,12 +22,16 @@ export class AppComponent implements OnInit  {
   columnDisplayed;
 
   constructor(private dp: DataProviderService){
-    this._gridData = new MatTableDataSource<any>();
+    this._gridData;
   }
 
   ngOnInit(){
-    this._gridData = this.dp.getJSON();
-    this.columnDisplayed = Object.keys(this._gridData[0]);
-    console.log(this._gridData);
+    this.dp.getJSON().subscribe((resp) => {
+      this._gridData = resp;
+      this.columnDisplayed = Object.keys(this._gridData[0]);
+      console.log(this._gridData);
+    });
+    //this.columnDisplayed = Object.keys(this._gridData[0]);
+    
   }
 }
