@@ -29,7 +29,7 @@ export class AppComponent implements OnInit  {
     this.dp.getJSON().subscribe((resp) => {
       this._gridData = resp;
       this.columnDisplayed = Object.keys(this._gridData[0]);
-      console.log(this._gridData);
+      console.log(this.columnDisplayed);
     });
     //this.columnDisplayed = Object.keys(this._gridData[0]);
     
