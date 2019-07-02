@@ -29,7 +29,6 @@ export class DataProviderService {
     {label:'Load No',name:'loadNo',type:'TEXT'},
     {label:'Order Date',name:'orderDate',type:'DATE'}
   ];
-  let _dataCopy = this._currentAvailableFilters;
-  return _dataCopy;
+  return this._currentAvailableFilters;
   }
 }

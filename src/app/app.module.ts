@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { DataProvider} from './dataprovider.service';
+import { DataProviderService} from './dataprovider.service';
 import { CdkTableModule } from '@angular/cdk/table'
 import {
   MatAutocompleteModule,
