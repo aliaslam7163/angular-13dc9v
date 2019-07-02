@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { DataProviderService} from './dataprovider.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CdkTableModule } from '@angular/cdk/table'
 import {
   MatAutocompleteModule,
@@ -43,7 +44,7 @@ import {
 } from '@angular/material';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, MatTableModule, HttpClientModule  ],
+  imports:      [ BrowserModule, FormsModule, MatTableModule, HttpClientModule, BrowserAnimationsModule  ],
   declarations: [ AppComponent, HelloComponent],
   bootstrap:    [ AppComponent ]
 })
