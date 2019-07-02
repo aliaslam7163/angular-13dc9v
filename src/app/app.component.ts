@@ -22,7 +22,7 @@ export class AppComponent implements OnInit  {
   columnDisplayed;
 
   constructor(private dp: DataProviderService){
-    this._gridData;
+    this._gridData = new MatTableDataSource<any[]>();
   }
 
   ngOnInit(){
