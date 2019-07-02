@@ -31,4 +31,8 @@ export class DataProviderService {
   ];
   return this._currentAvailableFilters;
   }
+
+  getJSON(){
+    return this.http.get("https://raw.githubusercontent.com/ag-grid/ag-grid/master/packages/ag-grid-docs/src/olympicWinners.json");
+  }
 }

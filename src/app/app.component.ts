@@ -19,13 +19,15 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class AppComponent implements OnInit  {
   _gridData;
+  columnDisplayed;
 
   constructor(private dp: DataProviderService){
     this._gridData = new MatTableDataSource<any>();
   }
 
   ngOnInit(){
-    this._gridData = this.dp.getAvailableSearch();
-    console.log(this._gridData)
+    this._gridData = this.dp.getJSON();
+    this.columnDisplayed = Object.keys(this._gridData[0]);
+    console.log(this._gridData);
   }
 }
